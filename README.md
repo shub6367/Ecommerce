@@ -1,8 +1,8 @@
-# MERN Ecommerce
+# EasyShop
 
 ## Description
 
-An ecommerce store built with MERN stack, and utilizes third party API's. This ecommerce store enable three main different flows or implementations:
+An ecommerce store built with MERN stack, and utilizes third party API's. This ecommerce store enables three main different flows or implementations:
 
 1. Buyers browse the store categories, products and brands
 2. Sellers or Merchants manage their own brand component
@@ -10,59 +10,59 @@ An ecommerce store built with MERN stack, and utilizes third party API's. This e
 
 ### Features:
 
-  * Node provides the backend environment for this application
-  * Express middleware is used to handle requests, routes
-  * Mongoose schemas to model the application data
-  * React for displaying UI components
-  * Redux to manage application's state
-  * Redux Thunk middleware to handle asynchronous redux actions
+* Node provides the backend environment for this application
+* Express middleware is used to handle requests, routes
+* Mongoose schemas to model the application data
+* React for displaying UI components
+* Redux to manage application's state
+* Redux Thunk middleware to handle asynchronous redux actions
 
-## Demo
+## Getting Started
 
-This application is deployed on Vercel Please check it out :smile: [here](https://mern-store-gold.vercel.app).
+### Prerequisites
 
-See admin dashboard [demo](https://mernstore-bucket.s3.us-east-2.amazonaws.com/admin.mp4)
+* Node.js
+* MongoDB
+* npm or yarn
 
-## Docker Guide
+### Installation
 
-To run this project locally you can use docker compose provided in the repository. Here is a guide on how to run this project locally using docker compose.
-
-Clone the repository
+1. Clone the repository
 ```
-git clone https://github.com/mohamedsamara/mern-ecommerce.git
-```
-
-Edit the dockercompose.yml file and update the the values for MONGO_URI and JWT_SECRET
-
-Then simply start the docker compose:
-
-```
-docker-compose build
-docker-compose up
-```
-
-## Database Seed
-
-* The seed command will create an admin user in the database
-* The email and password are passed with the command as arguments
-* Like below command, replace brackets with email and password. 
-* For more information, see code [here](server/utils/seed.js)
-
-```
-npm run seed:db [email-***@****.com] [password-******] // This is just an example.
-```
-
-## Install
-
-`npm install` in the project root will install dependencies in both `client` and `server`. [See package.json](package.json)
-
-Some basic Git commands are:
-
-```
-git clone https://github.com/mohamedsamara/mern-ecommerce.git
+git clone <your-repository-url>
 cd project
+```
+
+2. Install dependencies
+```
 npm install
 ```
+
+3. Set up environment variables
+   - Create `.env` files in both `client` and `server` directories
+   - See the example files for required environment variables
+
+4. Start the development server
+```
+npm run dev
+```
+
+The application will be available at `http://localhost:3000`
+
+### Database Setup
+
+1. Make sure MongoDB is running
+2. The application will automatically create the necessary collections
+3. To seed the database with initial data, run:
+```
+npm run seed:db admin@example.com yourpassword
+```
+
+## Development
+
+- Client runs on port 3000
+- Server runs on port 5000
+- API endpoints are prefixed with `/api/v1`
 
 ## ENV
 
